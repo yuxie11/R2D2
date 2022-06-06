@@ -22,17 +22,17 @@ This repo is the official implementation of <a href="https://arxiv.org/abs/2205.
 
 
 ## Pre-trained checkpoints
-Pre-trained image-text pairs | R2D2 | PRD2 
+Pre-trained image-text pairs | R2D2<sub><font size=1.5>ViT-L</font></sub> | PRD2<sub><font size=1.5>ViT-L</font></sub>
 --- | :---: | :---:
 250M | <a href="https://drive.google.com/file/d/18Fd3vGvj0Dz8rPlxROxugjZaF8Z4jf7g/view?usp=sharing">Download</a> | <a href="https://drive.google.com/file/d/15zDdam7_-YT0suA3Wc226vvxcyBxWZ_O/view?usp=sharing">Download
-23M | <a href="https://drive.google.com/drive/folders/1nbnrw4Ns2v3lktFSeyewgMUBIq0M_VUi?usp=sharing">Download</a> | -
-2.3M | <a href="https://drive.google.com/drive/folders/1nbnrw4Ns2v3lktFSeyewgMUBIq0M_VUi?usp=sharing">Download</a> | -
+23M | <a href="https://drive.google.com/file/d/1vvvMv3mTRFGAUojbSJoZiTuqYPJqIquh/view?usp=sharing">Download</a> | -
+2.3M | <a href="https://drive.google.com/file/d/1SKH-d1Vd-1wn3qUt6YKnep7VsTXfbTK0/view?usp=sharing">Download</a> | -
 
 
 ## Inference demo
-- To evaluate the pretrained R2D2 model on  image-text pairs, run:
+- To evaluate the pretrained R2D2 model on image-text pairs, run:
     <pre>python r2d2_inference_demo.py</pre> 
-- To evaluate the pretrained PRD2 model on  image-text pairs, run:
+- To evaluate the pretrained PRD2 model on image-text pairs, run:
     <pre>python prd2_inference_demo.py</pre> 
 
 ### Citation
