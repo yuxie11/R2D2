@@ -1,0 +1,16 @@
+torch==1.11.0
+transformers==4.15.0
+timm==0.4.12
+scipy==1.4.1
+fairscale==0.4.4
+pycocoevalcap
+ruamel_yaml
+yacs 
+ujson 
+einops 
+fnvhash 
+pillow 
+tqdm 
+torchmetrics 
+albumentations
+opencv-python
