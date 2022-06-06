@@ -33,7 +33,7 @@ Pre-trained image-text pairs | R2D2 | PRD2
 - To evaluate the pretrained R2D2 model on  image-text pairs, run:
     <pre>python r2d2_inference_demo.py</pre> 
 - To evaluate the pretrained PRD2 model on  image-text pairs, run:
-    <pre>python PRD2_inference_demo.py</pre> 
+    <pre>python r2d2_inference_demo.py</pre> 
 
 ### Citation
 If you find this code to be useful for your research, please consider citing.
