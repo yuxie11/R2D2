@@ -21,34 +21,33 @@ def evaluation(model, texts, image, image_size, device):
     print('Computing features for evaluation...')
     
     text_input = model.tokenize_text(texts).to(device)
-    image = preprocess(Image.open(image).convert('RGB'), image_size).unsqueeze(0).to(device) 
+    image_input = preprocess(Image.open(image).convert('RGB'), image_size).unsqueeze(0).to(device) 
 
-    text_output, text_embeds = model.encode_text(text_input)
-    image_feats, image_embeds = model.encode_image(image)
+    text_feats, text_embeds = model.encode_text(text_input)
+    image_feats, image_embeds = model.encode_image(image_input)
 
     sims_matrix = torch.einsum("ij,ij->i", [text_embeds, image_embeds])/model.temp
     
     encoder_output = image_feats.repeat(len(texts), 1, 1).to(device)
     encoder_att = torch.ones(encoder_output.size()[:-1], dtype=torch.long).to(device)
 
-    output = model.text_joint_layer(
-            encoder_embeds=text_output,
+    text_output = model.text_joint_layer(
+            encoder_embeds=text_feats,
             attention_mask=text_input.attention_mask,
             encoder_hidden_states=encoder_output,
             encoder_attention_mask=encoder_att,
             return_dict=True,
         )
 
-    img_output = model.img_joint_layer(encoder_embeds=model.img_joint_proj(encoder_output),
+    image_output = model.img_joint_layer(encoder_embeds=model.img_joint_proj(encoder_output),
                                        attention_mask=encoder_att,
-                                       encoder_hidden_states=text_output,
+                                       encoder_hidden_states=text_feats,
                                        encoder_attention_mask=text_input.attention_mask)
 
-    score = torch.softmax(model.itm_head(output.last_hidden_state[:, 0, :]),dim=-1)[:, 1]
-    score = (score + torch.softmax(model.itm_head_i(img_output.last_hidden_state[:, 0, :]),dim=-1)[:, 1]) / 2
-    sims_matrix = score
-
-    return sims_matrix.cpu().numpy()
+    score = torch.softmax(model.itm_head(text_output.last_hidden_state[:, 0, :]),dim=-1)[:, 1]
+    score = (score + torch.softmax(model.itm_head_i(image_output.last_hidden_state[:, 0, :]),dim=-1)[:, 1]) / 2
+    
+    return score.cpu().numpy()
 
 def main():
     device = "cuda:0" if torch.cuda.is_available() else "cpu"
