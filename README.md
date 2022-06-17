@@ -40,7 +40,7 @@ If you find this code to be useful for your research, please consider citing.
 <pre>
 @article{xie2022zero,
   title={Zero and R2D2: A Large-scale Chinese Cross-modal Benchmark and A Vision-Language Framework},
-  author={Xie, Chunyu and Cai, Heng and Song, Jianfei and Li, Jincheng and Kong, Fanjing and Wu, Xiaoyu and Morimitsu, Henrique and Yao, Lin and Wang, Dexin and Leng, Dawei and Ji, Xiangyang and Deng, Yafeng },
+  author={Xie, Chunyu and Cai, Heng and Song, Jianfei and Li, Jincheng and Kong, Fanjing and Wu, Xiaoyu and Morimitsu, Henrique and Yao, Lin and Wang, Dexin and Zhang, Xiangzheng and Leng, Dawei and Ji, Xiangyang and Deng, Yafeng },
   journal={arXiv preprint arXiv:2205.03860},
   year={2022}
 }</pre>
