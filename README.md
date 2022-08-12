@@ -14,7 +14,13 @@ This repo is the official implementation of <a href="https://arxiv.org/abs/2205.
 
 &#x274C;Pre-training code (coming soon).
 
+## Performance
+We show the performance of R2D2<sub><font size=1.5>ViT-L</font></sub> fine-tuned on Flickr30k-CNA dataset. The output of R2D2 is a similarity score between 0 and 1.
+中文 (English) | 乔丹投篮 (Jordan shot) | 乔丹运球 (Jordan dribble)|詹姆斯投篮 (James shot)
+--- | :---: | :---:|--
+Similarity score|0.99033021|0.91078649|0.61231128
 
+<img src="image/jordan.jpg">
 
 ## Requirements
 <pre/>pip install -r requirements.txt</pre> 
