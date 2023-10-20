@@ -1,0 +1,18 @@
+train_batch_size: 32
+test_batch_size: 32
+num_epoch: 10
+weight_decay: 0.05
+base_lr: 1e-5
+min_lr: 0
+warmup_lr: 1e-6
+warmup_steps: 500
+
+vit_type: 'large'
+image_size: 224
+top_k: 64
+
+image_path: 'dataset/IQR_IQM_ICR_ICM_images/'
+ann_path: 'dataset/IQR/'
+data: 'iqr'
+
+pretrained_model: ''

@@ -10,6 +10,7 @@ from models.bert import BertConfig, BertModel
 class R2D2(nn.Module):
     def __init__(
         self,
+        vit_type='large',
         image_size=224,
         embed_dim=768,
     ):
@@ -19,11 +20,19 @@ class R2D2(nn.Module):
             embed_dim (int): output embedding size
         """
         super().__init__()
-        vision_width = 1024
-        clip_config=transformers.CLIPConfig.from_pretrained('./checkpoints/r2d2_config/vision_config.json')
+        if vit_type=='large':
+            print('large')
+            vision_width = 1024
+            clip_config=transformers.CLIPConfig.from_pretrained('./checkpoints/r2d2_config/vision_config.json')
+            num_patches = (image_size // 14)**2
+        elif vit_type=='base':
+            print('base')
+            vision_width = 768
+            clip_config=transformers.CLIPConfig.from_pretrained('./checkpoints/r2d2_config/vision_config_base.json')
+            num_patches = (image_size // 16)**2
         clip = transformers.CLIPModel(config=clip_config).eval()
         self.visual_encoder = clip.vision_model
-        num_patches = (image_size // 14)**2
+
         if self.visual_encoder.embeddings.num_patches != num_patches:
             self.visual_encoder.embeddings.num_patches = num_patches
             self.visual_encoder.embeddings.position_embedding = nn.Embedding(num_patches + 1,

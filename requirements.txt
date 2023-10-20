@@ -13,4 +13,5 @@ pillow
 tqdm 
 torchmetrics 
 albumentations
-opencv-python
+opencv-python-headless==4.5.5.64
+pytorch-lightning==1.5.4

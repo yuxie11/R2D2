@@ -1,0 +1,18 @@
+model_name: 'r2d2_matching_iqm_base'
+num_workers: 32
+gpus: [0,1,2,3,4,5,6,7]
+
+valid_batch_size: 64
+train_batch_size: 64
+num_epochs: 20
+weight_decay: 0.01
+base_lr: 3e-6
+warmup_steps: 3125
+
+vit_type: "base"
+
+image_path: 'dataset/IQR_IQM_ICR_ICM_images/'
+ann_path: 'dataset/IQM'
+data: 'iqm'
+
+pretrained_model: 'checkpoints/matching/iqm_base_23m.pth'
