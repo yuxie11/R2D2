@@ -1,14 +1,18 @@
-# Zero and R2D2: A Large-scale Chinese Cross-modal Dataset and A Vision-Language Framework
+# CCMB and R2D2: A Large-scale Chinese Cross-modal Benchmark and A  Vision-Language Framework
 
 
 
-**CCMB: A Large-scale Chinese Cross-modal Benchmark (ACM MM 2023)**
+🔥🔥🔥 **CCMB: A Large-scale Chinese Cross-modal Benchmark (ACM MM 2023)**
 
-This repo is the official implementation of CCMB and R2D2</a>. It includes datasets, code, and models as following:
+
+
+This repo is the official implementation of CCMB and R2D2</a>. 
 
 <!-- &#x2705;<a href="http://zero.so.com">Zero benchmark</a> is available. The detailed introduction and download URL are in <font size=4>**http://zero.so.com**</font>. The 250M data is in -->
 
-CCMB is available. It include pre-train dataset (Zero) and 5 downstream datasets. The detailed introduction and download URL are in <font size=4>**http://zero.so.com**</font>. The 250M data is in https://pan.baidu.com/s/1gnNbjOdCQdqZ4bRNN1S-Vw?pwd=iau8
+CCMB is available. It include pre-train dataset (Zero) and 5 downstream datasets. The detailed introduction and download URL are in <font size=3>**http://zero.so.com**</font>. The 250M data is in <font size=3>**https://pan.baidu.com/s/1gnNbjOdCQdqZ4bRNN1S-Vw?pwd=iau8**</font>.
+
+R2D2 is a vision-language framework. We release the following code and models:
 
 &#x2705;Pre-trained checkpoints.
 
@@ -34,20 +38,20 @@ Similarity score|0.99033021|0.91078649|0.61231128
 
 
 ## Pre-trained checkpoints
-Pre-trained image-text pairs | R2D2<sub><font size=1.5>ViT-B</font></sub> | R2D2<sub><font size=1.5>ViT-L</font></sub> | PRD2<sub><font size=1.5>ViT-L</font></sub>
---- | :---:| :---: | :---:
-250M | - | <a href="https://drive.google.com/file/d/18Fd3vGvj0Dz8rPlxROxugjZaF8Z4jf7g/view?usp=sharing">Download</a> | <a href="https://drive.google.com/file/d/15zDdam7_-YT0suA3Wc226vvxcyBxWZ_O/view?usp=sharing">Download
-23M | - | <a href="https://drive.google.com/file/d/1vvvMv3mTRFGAUojbSJoZiTuqYPJqIquh/view?usp=sharing">Download</a> | -
+Pre-trained image-text pairs | R2D2<sub><font size=1.5>ViT-L</font></sub> | PRD2<sub><font size=1.5>ViT-L</font></sub>
+--- | :---: | :---:
+250M | <a href="https://drive.google.com/file/d/18Fd3vGvj0Dz8rPlxROxugjZaF8Z4jf7g/view?usp=sharing">Download</a> | <a href="https://drive.google.com/file/d/15zDdam7_-YT0suA3Wc226vvxcyBxWZ_O/view?usp=sharing">Download
+23M |  <a href="https://drive.google.com/file/d/1vvvMv3mTRFGAUojbSJoZiTuqYPJqIquh/view?usp=sharing">Download</a> | -
 <!-- 2.3M | - | <a href="https://drive.google.com/file/d/1SKH-d1Vd-1wn3qUt6YKnep7VsTXfbTK0/view?usp=sharing">Download</a> | - -->
 
 ## Fine-tuned checkpoints
-Dataset | R2D2<sub><font size=1.5>ViT-B</font></sub>(23M) | R2D2<sub><font size=1.5>ViT-L</font></sub>(23M)
---- | :---: | :---:
-Flickr-CNA | <a href="https://drive.google.com/file/d/1qgbDIqSUBqGz6rGCGKtW14wzPTIcnLLg/view?usp=sharing">Download</a> | -
-IQR | <a href="https://drive.google.com/file/d/1lQ6rqMXukzul6XQJ8uZe_BQh-tuL1KNm/view?usp=sharing">Download</a> | -
-ICR | <a href="https://drive.google.com/file/d/15Zsr8n49AEjOi2MkOfp1ZtUAKGss_Xbz/view?usp=sharing">Download</a> | -
-IQM | <a href="https://drive.google.com/file/d/1JxLL6mlhDz_pjoUuyeeRVTHw0q8gW5et/view?usp=sharing">Download</a> | -
-ICM | <a href="https://drive.google.com/file/d/1FI9RzJT-0j30ftcfkx0zDF2v3T7iXZtG/view?usp=sharing">Download</a> | -
+Dataset | R2D2<sub><font size=1.5>ViT-B</font></sub>(23M) | 
+--- | :---: 
+Flickr-CNA | <a href="https://drive.google.com/file/d/1qgbDIqSUBqGz6rGCGKtW14wzPTIcnLLg/view?usp=sharing">Download</a> 
+IQR | <a href="https://drive.google.com/file/d/1lQ6rqMXukzul6XQJ8uZe_BQh-tuL1KNm/view?usp=sharing">Download</a> 
+ICR | <a href="https://drive.google.com/file/d/15Zsr8n49AEjOi2MkOfp1ZtUAKGss_Xbz/view?usp=sharing">Download</a> 
+IQM | <a href="https://drive.google.com/file/d/1JxLL6mlhDz_pjoUuyeeRVTHw0q8gW5et/view?usp=sharing">Download</a> 
+ICM | <a href="https://drive.google.com/file/d/1FI9RzJT-0j30ftcfkx0zDF2v3T7iXZtG/view?usp=sharing">Download</a> 
 
 ## Inference demo
 - To evaluate the pretrained R2D2 model on image-text pairs, run:
@@ -94,11 +98,12 @@ ICM | <a href="https://drive.google.com/file/d/1FI9RzJT-0j30ftcfkx0zDF2v3T7iXZtG
       ```
     
 ### Citation
-If you find this code to be useful for your research, please consider citing.
+If you find this dataset and code useful for your research, please consider citing.
 <pre>
-@article{xie2022zero,
-  title={Zero and R2D2: A Large-scale Chinese Cross-modal Benchmark and A Vision-Language Framework},
-  author={Xie, Chunyu and Cai, Heng and Song, Jianfei and Li, Jincheng and Kong, Fanjing and Wu, Xiaoyu and Morimitsu, Henrique and Yao, Lin and Wang, Dexin and Leng, Dawei and Ji, Xiangyang and Deng, Yafeng },
-  journal={arXiv preprint arXiv:2205.03860},
-  year={2022}
+@inproceedings{xie2023ccmb,
+  title={CCMB: A Large-scale Chinese Cross-modal Benchmark},
+  author={Xie, Chunyu and Cai, Heng and Li, Jincheng and Kong, Fanjing and Wu, Xiaoyu and Song, Jianfei and Morimitsu, Henrique and Yao, Lin and Wang, Dexin and Zhang, Xiangzheng and others},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  pages={4219--4227},
+  year={2023}
 }</pre>
